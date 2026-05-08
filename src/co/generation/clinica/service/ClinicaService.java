@@ -17,7 +17,7 @@ public class ClinicaService implements Consultable {
     private List<Medico> medicos = new ArrayList<>();
     private List<Turno> turnos = new ArrayList<>();
 
-    // CORRECCIÓN: Se necesitan los Getters para que DatosCSV funcione
+
     public List<Paciente> getPacientes() { return pacientes; }
     public List<Medico> getMedicos() { return medicos; }
     public List<Turno> getTurnos() { return turnos; }

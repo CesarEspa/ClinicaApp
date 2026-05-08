@@ -11,7 +11,6 @@ public class Paciente implements Registrable {
     private String apellido;
     private String telefono;
 
-    // Constructor con ID (Para cargar desde CSV)
     public Paciente(int id, String cedula, String nombre, String apellido, String telefono) {
         this.id = id;
         setCedula(cedula);
@@ -20,7 +19,6 @@ public class Paciente implements Registrable {
         setTelefono(telefono);
     }
 
-    // Constructor sin ID (Para nuevos registros manuales)
     public Paciente(String cedula, String nombre, String apellido, String telefono) {
         setCedula(cedula);
         setNombre(nombre);

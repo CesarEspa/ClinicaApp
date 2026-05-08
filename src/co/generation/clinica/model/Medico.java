@@ -9,7 +9,6 @@ public class Medico implements Registrable {
     private String apellido;
     private Especialidad especialidad;
 
-    // Constructor con ID (Para cargar desde CSV)
     public Medico(int id, String nombre, String apellido, Especialidad especialidad) {
         this.id = id;
         setNombre(nombre);
@@ -17,7 +16,6 @@ public class Medico implements Registrable {
         setEspecialidad(especialidad);
     }
 
-    // Constructor sin ID (Para nuevos registros manuales)
     public Medico(String nombre, String apellido, Especialidad especialidad) {
         setNombre(nombre);
         setApellido(apellido);
