@@ -12,7 +12,6 @@ public class Turno implements Registrable {
     private LocalDateTime fechaHora;
     private EstadoTurno estado;
 
-    // Constructor con ID (Para cargar desde CSV)
     public Turno(int id, Paciente paciente, Medico medico, LocalDateTime fechaHora, EstadoTurno estado) {
         this.id = id;
         this.paciente = paciente;
@@ -20,28 +19,45 @@ public class Turno implements Registrable {
         this.fechaHora = fechaHora;
         this.estado = estado;
     }
-
-    // Constructor sin ID (Para nuevos registros manuales)
     public Turno(Paciente paciente, Medico medico, LocalDateTime fechaHora) {
         this.paciente = paciente;
         this.medico = medico;
         this.fechaHora = fechaHora;
-        this.estado = EstadoTurno.PENDIENTE; // Estado por defecto al crear
+        this.estado = EstadoTurno.PENDIENTE;
     }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public Paciente getPaciente() { return paciente; }
-    public void setPaciente(Paciente paciente) { this.paciente = paciente; }
+    public Paciente getPaciente() {
+        return paciente;
+    }
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
 
-    public Medico getMedico() { return medico; }
-    public void setMedico(Medico medico) { this.medico = medico; }
+    public Medico getMedico() {
+        return medico;
+    }
 
-    public LocalDateTime getFechaHora() { return fechaHora; }
+    public void setMedico(Medico medico) {
+        this.medico = medico;
+    }
+
+    public LocalDateTime getFechaHora() {
+        return fechaHora;
+    }
     public void setFechaHora(LocalDateTime fechaHora) { this.fechaHora = fechaHora; }
 
-    public EstadoTurno getEstado() { return estado; }
+    public EstadoTurno getEstado() {
+        return estado;
+    }
+
+
     public void setEstado(EstadoTurno estado) { this.estado = estado; }
 
     @Override
@@ -66,7 +82,6 @@ public class Turno implements Registrable {
         return Objects.hash(medico, fechaHora);
     }
 
-    // --- Implementación de Registrable ---
     @Override
     public String getDatosRegistro() {
         return "Turno registrado: " + this.toString();

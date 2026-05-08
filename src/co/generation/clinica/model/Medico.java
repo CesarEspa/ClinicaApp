@@ -69,7 +69,6 @@ public class Medico implements Registrable {
         return "Dr. " + nombre + " " + apellido + " - " + especialidad;
     }
 
-    // --- Implementación de Registrable ---
     @Override
     public String getDatosRegistro() {
         return "Médico registrado: " + this.toString();

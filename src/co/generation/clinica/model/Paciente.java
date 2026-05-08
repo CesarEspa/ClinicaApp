@@ -84,7 +84,6 @@ public class Paciente implements Registrable {
         return getNombre() + " " + getApellido() + " - CC: " + getCedula() + " - Tel: " + getTelefono();
     }
 
-    // --- Implementación de Registrable ---
     @Override
     public String getDatosRegistro() {
         return "Paciente registrado: " + this.toString();
