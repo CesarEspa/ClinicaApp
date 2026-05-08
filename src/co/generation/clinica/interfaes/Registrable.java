@@ -1,6 +1,4 @@
-package co.generation.clinica.interfaes;
-
-
+package co.generation.clinica.interfaces;
 
 public interface Registrable {
     String getDatosRegistro();
